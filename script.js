@@ -1,12 +1,3 @@
-// gsap.registerPlugin(ScrollTrigger);
-
-// ScrollTrigger.defaults({
-//     toggleActions: "play "
-// });
-
-
-
-
 
 gsap.from(".stats-block-phone", {
     opacity: 1,
@@ -111,7 +102,7 @@ gsap.from(".scrolling", {
     delay: 1,
     scrollTrigger: {
         trigger: ".scrolling",
-        toggleActions: "reverse restart",
+        toggleActions: "play restart reverse ",
         stagger: '0.6',
     },
 
@@ -175,19 +166,6 @@ gsap.from(".scrolling", {
 //         toggleActions: "reverse restart ",
 //     }
 // });
-
-
-
-
-
-
-
-
-
-///subs
-
-
-
 
 
 
