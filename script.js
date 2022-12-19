@@ -91,53 +91,128 @@ gsap.from(".chat-3", {
         toggleActions: "restart "
     },
 });
+
 gsap.from(".post-card__exposed-image", {
     opacity: 0,
     y: -100,
-    duration: 1,
+    duration: 0.5,
     delay: 1,
     scrollTrigger: {
         trigger: ".post-card__exposed-image",
-        toggleActions: "restart "
+        toggleActions: "reverse restart "
 
     }
 
 });
+gsap.from(".scrolling", {
+    opacity: 1,
+    y: 500,
+    duration: 1.5,
+    delay: 1,
+    scrollTrigger: {
+        trigger: ".scrolling",
+        toggleActions: "reverse restart",
+        stagger: '0.6',
+    },
 
-///subs
-// gsap.from("", {
-//     opacity: 0,
-//     x: 500,
-//     z: -100,
-//     y: 500,
-//     duration: 1,
-//     delay: 1,
+});
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.to(".post-card__exposed-image", {
 //     scrollTrigger: {
-//         trigger: ".card-1",
-//         toggleActions: "restart "
+//         trigger: ".post-card__exposed-image",
+//         endTrigger: ".tips-block-post",
+//         y: "-30%",
+//         opacity: 0,
+//         scrub: true,
+//         pin: true,
+//         start: "50% 50%",
+//         end: "+=2000",
+//         toggleClass: "active",
+//         ease: "power2",
+//         toggleActions: "reverse restart ",
 
 //     }
+// });
+// gsap.from(".card-1", {
+//     opacity: 1,
+//     x: 500,
+//     y: -200,
+//     duration: 1,
+//     delay: 0,
+//     scrollTrigger: {
+//         trigger: ".iphone-frame",
+//         toggleActions: " play",
 
+//     },
+
+// });
+// gsap.from(".card-2", {
+//     opacity: 1,
+//     y: 1000,
+//     x: -500,
+//     duration: 1,
+//     delay: 0,
+//     scrollTrigger: {
+//         trigger: ".iphone-frame",
+//         toggleActions: " restart",
+
+//     },
+
+// });
+
+
+
+// gsap.timeline({
+//     scrollTrigger: {
+//         trigger: ".post-card-absolute",
+//         endTrigger: ".tips-block-post",
+//         start: "50% 50%",
+//         end: "+=2000",
+//         scrub: true,
+//         pin: true,
+//         markers: true,
+//         toggleActions: "reverse restart ",
+//     }
 // });
 
 
 
 
 
-const tl = gsap.timeline({
 
-});
-ScrollTrigger.create({
 
-    trigger: ".post-card__exposed-image",
-    pin: true,
-    start: "50% 50%",
-    end: "+=2000",
-    endTrigger: '.tips-block',
-    markers: true,
-    toggleActions: "play none none restart",
-    ease: "power1.inOut",
-});
+
+
+///subs
+
+
+
+
+
+
+
+
+// const tl = gsap.timeline({
+
+// });
+// ScrollTrigger.create({
+
+//     trigger: ".subscription-post-cards",
+//     endTrigger: ".tips-block-chats",
+//     start: "60% 60%",
+//     end: "+=1800",
+//     // pin: true,
+//     // endTrigger: '.tips-block',
+//     markers: true,
+//     // toggleActions: "play ",
+//     ease: "power1.inOut",
+//     // onLeaveBack: () => { gsap.set('.xx', { position: 'relative' }) },
+//     onEnter: () => { gsap.set('.x', { position: 'fixed' }) }
+// });
+
+
+
 
 // tl.from(".subscription-post-cards", {
 //     scale: 0.5,
